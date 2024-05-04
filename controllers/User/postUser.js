@@ -12,7 +12,7 @@ router.post("/APIBACKEND/post-user", async (req, res) => {
       username: username,
       password: password
     });
-
+aa
     res.status(200).send({
       payload: {
         otp: otp,

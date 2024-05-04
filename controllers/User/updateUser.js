@@ -8,7 +8,7 @@ router.post("/APIBACKEND/update-user", async (req, res) => {
       .update({
         username: username,
       })
-      .where({ id: id });
+      .where({ userId: id });
 
     res.status(200).send({
       payload: [],
