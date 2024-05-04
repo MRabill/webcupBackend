@@ -1,12 +1,12 @@
 // const { router, knexDb } = require("../../utils/routes.imports.utils");
 const { router, knexDb } = require("../../utils/routes.imports.utils");
 
-router.post("/APIBACKEND/update-user", async (req, res) => {
+router.post("/APIBACKEND/update-training", async (req, res) => {
   try {
-    const { username, id } = req.body;
-    await knexDb("User")
+    const { trainingName, id } = req.body;
+    await knexDb("Training")
       .update({
-        username: username,
+        trainingName: trainingName,
       })
       .where({ id: id });
 

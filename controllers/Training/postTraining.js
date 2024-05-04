@@ -1,19 +1,17 @@
 // const { router, knexDb } = require("../../utils/routes.imports.utils");
 const { router, knexDb } = require("../../utils/routes.imports.utils");
 
-router.post("/APIBACKEND/update-user", async (req, res) => {
+router.post("/APIBACKEND/post-training", async (req, res) => {
   try {
-    const { username, id } = req.body;
-    await knexDb("User")
-      .update({
-        username: username,
-      })
-      .where({ id: id });
+    const { username } = req.body;
+    await knexDb("Training").insert({
+      trainingName: trainingName,
+    });
 
     res.status(200).send({
       payload: [],
-      message: "Successfully updated user",
-      success: true,a
+      message: "Successfully add Training",
+      success: true,
     });
   } catch (e) {
     console.error({ error: e });

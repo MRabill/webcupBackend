@@ -6,6 +6,7 @@ router.post("/APIBACKEND/post-user", async (req, res) => {
     const { username } = req.body;
     await knexDb("User").insert({
       username: username,
+      password:password
     });
 
     res.status(200).send({
