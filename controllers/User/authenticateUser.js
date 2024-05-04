@@ -10,7 +10,7 @@ router.post("/APIBACKEND/authenticate-user", async (req, res) => {
 
     if (user) {
       res.status(200).send({
-        payload: user,
+        payload: null,
         message: "Authentication successful",
         success: true,
       });
