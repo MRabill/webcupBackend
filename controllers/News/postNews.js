@@ -1,4 +1,3 @@
-// const { router, knexDb } = require("../../utils/routes.imports.utils");
 const { router, knexDb } = require("../../utils/routes.imports.utils");
 
 router.post("/APIBACKEND/post-news", async (req, res) => {
